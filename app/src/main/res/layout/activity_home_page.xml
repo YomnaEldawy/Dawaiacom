@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yomna.dawaiacom.HomePageActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/search_img"
+            android:padding="5dp"
+
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_search"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/search_img"
+            android:id="@+id/cart_container"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/cart_img"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_cart"
+                android:onClick="openCart"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/items_count_container"
+                android:visibility="invisible"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/items_count_circle"
+                    android:padding="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/circle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/items_count_value"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/logo_img"
+            android:layout_toRightOf="@+id/cart_container"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_home"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:onClick="openHome"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/dawaialogo"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/page_content"
+        ></FrameLayout>
+
+</RelativeLayout>
